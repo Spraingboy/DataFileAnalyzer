@@ -1,0 +1,39 @@
+/* 原生主题负责控件；只扩展明确命名的自有容器，不依赖自动生成类名。 */
+:root { --dfa-ink: #172B4D; --dfa-muted: #7A8699; --dfa-border: #E4EAF3; }
+html, body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif; }
+h1, h2, h3 { color: var(--dfa-ink); letter-spacing: -0.02em; }
+h1 { margin-bottom: 0; }
+[class*="st-key-card_"] {
+    background: #FFFFFF; border: 1px solid var(--dfa-border); border-radius: 14px;
+    padding: 20px; box-shadow: 0 3px 16px rgba(23, 43, 77, 0.035);
+}
+[class*="st-key-kpi_"] { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.dfa-brand { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 28px; }
+.dfa-mark { flex: 0 0 35px; height: 35px; border-radius: 10px; background: #496DE6;
+    color: white; display: grid; place-items: center; font-size: 21px; font-weight: 700; }
+.dfa-brand-name { font-size: 19px; color: var(--dfa-ink); font-weight: 700; letter-spacing: -0.5px; }
+.dfa-brand-cn { font-size: 11px; color: var(--dfa-muted); line-height: 1.8; margin-top: 4px; }
+.dfa-kicker { font-size: 11px; font-weight: 650; letter-spacing: 1.7px; color: #496DE6; margin: 4px 0 8px; }
+.dfa-section-label { color: var(--dfa-muted); font-size: 11px; letter-spacing: 1.5px; margin: 0 0 12px; }
+.dfa-sidebar-footer { margin-top: clamp(30px, 14vh, 140px); padding-top: 18px; border-top: 1px solid var(--dfa-border); color: var(--dfa-muted); font-size: 12px; line-height: 1.9; }
+.st-key-page_navigation [role="radiogroup"] { gap: 5px; width: 100%; }
+.st-key-page_navigation label:has(input[type="radio"]) { width: 100%; box-sizing: border-box; border-radius: 9px; padding: 10px 12px; transition: background-color .12s; }
+.st-key-page_navigation label:has(input[type="radio"]:checked) { background: #EDF2FF; color: #496DE6; }
+.dfa-empty { padding: 14px 4px 4px; color: var(--dfa-muted); font-size: 13px; line-height: 1.8; }
+.dfa-empty strong { color: var(--dfa-ink); font-weight: 600; }
+[class*="st-key-fm_delete_"] button, [class*="st-key-fm_confirm_"] button {
+    color: #D9534F; border-color: #F1DAD9; background-color: #FFF8F7;
+}
+@media (min-height: 760px) {
+    .dfa-sidebar-footer { position: fixed; bottom: 24px; width: 220px; margin-top: 0; }
+}
+@media (max-width: 900px) {
+    [class*="st-key-card_"] { padding: 16px; }
+    .dfa-sidebar-footer { margin-top: 28px; }
+}
+@media (max-width: 1100px) {
+    [class*="st-key-kpi_"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+    [class*="st-key-kpi_"] { grid-template-columns: minmax(0, 1fr); }
+}

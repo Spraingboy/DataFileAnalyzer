@@ -1,0 +1,13 @@
+# 目标 Python 3.11；当前实测 Python 3.13.2。
+# 仅固定直接依赖，传递依赖由 pip 解析。
+
+# 应用运行依赖
+streamlit==1.66.1
+pandas==2.3.3
+plotly==6.9.0
+openpyxl==3.1.5
+
+# 自动化测试依赖
+pytest==8.4.2
+
+# sqlite3、csv、io、statistics、pathlib 为 Python 标准库，无需另装。
